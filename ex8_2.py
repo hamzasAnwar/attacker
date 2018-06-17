@@ -22,5 +22,4 @@ if __name__ == '__main__':
     user_session = requests.session()
     response,success = login(user_session)
     response = attack(user_session)
-
     print(response)
